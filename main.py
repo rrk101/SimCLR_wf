@@ -89,6 +89,7 @@ def test(net, memory_data_loader, test_data_loader):
 
 
 if __name__ == '__main__':
+    torch.cuda.set_device('cuda:6')
     parser = argparse.ArgumentParser(description='Train SimCLR')
     parser.add_argument('--feature_dim', default=128, type=int, help='Feature dim for latent vector')
     parser.add_argument('--temperature', default=0.5, type=float, help='Temperature used in softmax')
